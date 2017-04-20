@@ -1,0 +1,36 @@
+{
+  "name": "beta-modules",
+  "version": "0.1.0",
+  "description": "Very draft",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "bail": false,
+    "rootDir": ".",
+    "modulePaths": [
+      "<rootDir>/", 
+      "<rootDir>/../",
+      "<rootDir>/../../vendor/"
+    ],
+    "moduleNameMapper":{
+      "^underscore$": "underscore-min.js",
+      "^underscore.all$": "underscore-loader.js",
+      "shared/underscore.ext": "underscore.ext.js",
+      "shared/io": "io.js",
+      "json2": "json2.js"
+    },
+    "globals": {
+      "modulesRoot":"",
+      "vendorRoot":"../../../vendor/",
+      "modules_underscore": "underscore-min.js"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^17.0.2",
+    "jest-cli": "^17.0.2"
+  }
+}
